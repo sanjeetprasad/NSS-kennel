@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 // the context is imported and used by individual components that need data
 
@@ -14,11 +14,11 @@ export const LocationProvider = (props) => {
         
         .then(res => res.json())
         .then(setLocations)
-    },
+    }
 
 const addLocation = (location) => {
     return fetch("http://localhost:8088/locations", {
-        method: "POST"
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
