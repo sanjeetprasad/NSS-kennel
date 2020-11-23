@@ -6,6 +6,13 @@
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Doodles",
+            "breed": "Poodle",
+            "customerId": 1,
+            "locationId": 2
         }
     ],
     "customers": [
@@ -15,7 +22,20 @@
             "address": "7002 Chestnut Ct"
         }
     ],
-    "employees": [],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Tom",
+            "department": "Customer Service"
+            
+        },
+        {
+            "id": 2,
+            "name": "Jon",
+            "department": "Production"
+            
+        }
+    ],
     "locations": [
         {
             "id": 1,
