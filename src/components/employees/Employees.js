@@ -6,5 +6,6 @@ export const Employee = ({employee}) => (
         <section className="employee">
             <h3 className="employee__name">{employee.name}</h3>
             <div className="employee__department">{employee.department}</div>
-        </section>
+            <div className="employee__locationId">LocationId: {employee.locationId}</div>
+            </section>
     )

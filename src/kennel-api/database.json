@@ -11,7 +11,14 @@
             "id": 2,
             "name": "Doodles",
             "breed": "Poodle",
-            "customerId": 1,
+            "customerId": 2,
+            "locationId": 2
+        },
+        {
+            "id": 3,
+            "name": "Doodles",
+            "breed": "Poodle",
+            "customerId": 3,
             "locationId": 2
         }
     ],
@@ -20,20 +27,43 @@
             "id": 1,
             "name": "Hannah Hall",
             "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 2,
+            "name": "Hannah Hall",
+            "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 3,
+            "name": "Hannah Hall",
+            "address": "7002 Chestnut Ct"
         }
     ],
     "employees": [
         {
             "id": 1,
-            "name": "Tom",
-            "department": "Customer Service"
+            "name": "Tom Bisop",
+            "department": "Customer Service",
+            "locationId": 1
             
         },
         {
             "id": 2,
-            "name": "Jon",
-            "department": "Production"
-            
+            "name": "Jon Edward",
+            "department": "Production",
+            "locationId": 1
+        },
+        {
+            "id": 3,
+            "name": "Jeremy Bakker",
+            "department": "Production",
+            "locationId": 2
+        },
+        {
+            "id": 4,
+            "name": "Herry Parker",
+            "department": "Production",
+            "locationId": 2
         }
     ],
     "locations": [
