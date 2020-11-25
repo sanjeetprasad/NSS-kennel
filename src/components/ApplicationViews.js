@@ -18,13 +18,13 @@ export const ApplicationViews = (props) => {
                     <LocationList />
                 </Route>
             </LocationProvider>
-
-            <AnimalProvider>
-                {/* Render the animal list when http://localhost:3000/animals */}
+             {/* Render the animal list when http://localhost:3000/animals */}
+             {/* <AnimalProvider>
+                
                 <Route path="/animals">
                     <AnimalList />
                 </Route>
-            </AnimalProvider>
+            </AnimalProvider>   */}
 
             <CustomerProvider>
                 {/* Render the animal list when http://localhost:3000/animals */}
@@ -32,13 +32,33 @@ export const ApplicationViews = (props) => {
                     <CustomerList />
                 </Route>
             </CustomerProvider>
-
-            <EmployeeProvider>
-                {/* Render the animal list when http://localhost:3000/animals */}
+          
+          {/* Render the animal list when http://localhost:3000/animals */}
+            {/* <EmployeeProvider>
+                
                 <Route path="/employees">
                     <EmployeeList />
                 </Route>
-            </EmployeeProvider>
+            </EmployeeProvider> */}
+
+            <EmployeeProvider>
+                <LocationProvider>
+                   <Route path="/employees">
+                       <EmployeeList />
+                  </Route>
+                </LocationProvider>
+          </EmployeeProvider>
+
+            <AnimalProvider>
+               <LocationProvider>
+                 <CustomerProvider>
+                    <Route exact path="/animals">
+                        <AnimalList />
+                    </Route>
+                 </CustomerProvider>
+               </LocationProvider>
+            </AnimalProvider>
+
         </>
     )
 }
