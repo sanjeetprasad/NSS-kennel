@@ -1,81 +1,91 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 2
-        },
-        {
-            "id": 2,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 2,
-            "locationId": 2
-        },
-        {
-            "id": 3,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 3,
-            "locationId": 2
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 3,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Tom Bisop",
-            "department": "Customer Service",
-            "locationId": 1
-            
-        },
-        {
-            "id": 2,
-            "name": "Jon Edward",
-            "department": "Production",
-            "locationId": 1
-        },
-        {
-            "id": 3,
-            "name": "Jeremy Bakker",
-            "department": "Production",
-            "locationId": 2
-        },
-        {
-            "id": 4,
-            "name": "Herry Parker",
-            "department": "Production",
-            "locationId": 2
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "id": 2,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 2,
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 2,
+      "locationId": 2
+    }
+  ],
+  "customers": [
+    {
+      "email": "sanjeet.p@gmail.com",
+      "password": "sanjeet123",
+      "name": "sanjeet prasad",
+      "id": 1
+    },
+    {
+      "email": "jayna@gmail.com",
+      "password": "123456",
+      "name": "Jayna Leitze",
+      "id": 2
+    },
+    {
+      "email": "alice@gmail.com",
+      "password": "123456",
+      "name": "Alice Nie",
+      "id": 3
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Tom Bisop",
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "name": "Jon Edward",
+      "locationId": 1
+    },
+    {
+      "id": 3,
+      "name": "Jeremy Bakker",
+      "locationId": 2
+    },
+    {
+      "id": 4,
+      "name": "Herry Parker",
+      "locationId": 2
+    },
+    {
+      "name": "will",
+      "locationId": 1,
+      "animalId": 1,
+      "id": 5
+    },
+    {
+      "name": "will",
+      "locationId": 1,
+      "animalId": 1,
+      "id": 6
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    }
+  ]
 }
