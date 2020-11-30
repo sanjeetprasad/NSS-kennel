@@ -18,8 +18,22 @@
       "id": 3,
       "name": "Doodles",
       "breed": "Poodle",
-      "customerId": 2,
+      "customerId": 3,
       "locationId": 2
+    },
+    {
+      "name": "Bali",
+      "locationId": 2,
+      "customerId": 3,
+      "breed": "Labrador",
+      "id": 4
+    },
+    {
+      "name": "rocky",
+      "locationId": 1,
+      "customerId": 3,
+      "breed": "docky",
+      "id": 5
     }
   ],
   "customers": [

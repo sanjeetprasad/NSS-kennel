@@ -5,7 +5,7 @@ import { CustomerContext } from "../customer/CustomerProvider"
 import { Animal } from "./Animal"
 import "./Animal.css"
 
-export const AnimalList = () => {
+export const AnimalList = (props) => {
     // This state changes when `getLocations()` is invoked below
     const { animals, getAnimals } = useContext(AnimalContext)
     const { locations, getLocations } = useContext(LocationContext)
@@ -33,16 +33,37 @@ export const AnimalList = () => {
     // }, [animals])
 
     return (
-        <div className="animals"> {
-            animals.map(animal => {
+        <div className="animals"> 
+            <h1>Animals</h1>
+            <button className= "add-animal" onClick={() => props.history.push("/animals/create")}>
+            Make Appointment
+        </button>
+        <article className="animalList">
+            {animals.map(animal => {
             const owner = customers.find(c => c.id === animal.customerId)
             const clinic = locations.find(l => l.id === animal.locationId)
 
-        return <Animal key={animal.id} animal={animal} location={clinic} customer={owner} />})
-        }
+        return <Animal key={animal.id} animal={animal} customer={owner} location={clinic} />})}
+        </article>  
         </div>
     )
 
     
 }
 
+
+// return (
+//     <div className="employees">
+//         <h1>Employees</h1>
+//         <button className= "add-employee" onClick={() => props.history.push("/employees/create")}>
+//             Add Employee
+//         </button>
+//         <article className="employeeList">
+//             {employees.map(employee => {
+//             const clinic = locations.find(loc => loc.id === employee.locationId)
+            
+//             return <Employee key={employee.id} employee={employee} location={clinic} />})}
+//         </article>
+            
+//     </div>
+// )
