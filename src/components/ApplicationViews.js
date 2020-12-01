@@ -10,6 +10,7 @@ import { EmployeeList } from "./employees/EmployeesList"
 import { CustomerList } from "./customer/CustomerList"
 import {EmployeeForm} from "./employees/EmployeeForm"
 import {AnimalForm} from "./animal/AnimalForm"
+import {EmployeeDetail} from "./employees/EmployeeDetail"
 
 export const ApplicationViews = (props) => {
     return (
@@ -43,7 +44,7 @@ export const ApplicationViews = (props) => {
                 </Route>
             </EmployeeProvider> */}
 
-            <EmployeeProvider>
+            {/* <EmployeeProvider>
                 <LocationProvider>
                     <AnimalProvider>
                   <Route exact path="/employees" render={
@@ -55,7 +56,27 @@ export const ApplicationViews = (props) => {
                     } />
                     </AnimalProvider>
                 </LocationProvider>
-          </EmployeeProvider>
+            </EmployeeProvider> */}
+            
+            <EmployeeProvider>
+               <LocationProvider>
+                   <AnimalProvider>
+                       <Route exact path="/employees" render={
+                           props => {
+                           return <EmployeeList {...props} />
+                          } }/>
+                          <Route path="/employees/create" render={
+                     props => <EmployeeForm {...props} />
+                    } />
+                          {/* New route for showing employee details */}
+                       <Route path="/employees/:employeeId(\d+)" render={
+                           props => {
+                           return <EmployeeDetail {...props} />
+                          }} />
+                    </AnimalProvider>
+                </LocationProvider>
+            </EmployeeProvider>
+
 
             <AnimalProvider>
                <LocationProvider>
