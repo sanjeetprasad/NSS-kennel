@@ -11,7 +11,7 @@ import "./Animal.css"
 //     </section>
 // )
 
-export default ({ animal }) => (
+export const Animal = ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
             <Link to={`/animals/${animal.id}`}>
