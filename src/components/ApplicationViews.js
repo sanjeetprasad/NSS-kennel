@@ -12,6 +12,7 @@ import {EmployeeForm} from "./employees/EmployeeForm"
 import {AnimalForm} from "./animal/AnimalForm"
 import {EmployeeDetail} from "./employees/EmployeeDetail"
 import {LocationDetail} from "./location/LocationDetail"
+import {AnimalDetails} from "./animal/AnimalDetail"
 
 export const ApplicationViews = (props) => {
     return (
@@ -26,6 +27,9 @@ export const ApplicationViews = (props) => {
                 <Route path="/locations/:locationId(\d+)" render={
                    props => <LocationDetail {...props} />
                  } />
+                   <Route path="/animals/:animalId(\d+)" render={
+                  props => <AnimalDetails {...props} />
+                   } />
             </LocationProvider>
             </EmployeeProvider>
             </AnimalProvider>
