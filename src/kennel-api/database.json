@@ -1,13 +1,6 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 2
-    },
-    {
       "id": 2,
       "name": "Doodles",
       "breed": "Poodle",
@@ -34,13 +27,6 @@
       "customerId": 3,
       "breed": "docky",
       "id": 5
-    },
-    {
-      "name": "Lala",
-      "locationId": 1,
-      "customerId": 1,
-      "breed": "Lili",
-      "id": 6
     }
   ],
   "customers": [
@@ -83,18 +69,6 @@
       "id": 4,
       "name": "Herry Parker",
       "locationId": 2
-    },
-    {
-      "name": "will",
-      "locationId": 1,
-      "animalId": 1,
-      "id": 5
-    },
-    {
-      "name": "will",
-      "locationId": 3,
-      "animalId": 1,
-      "id": 6
     }
   ],
   "locations": [
