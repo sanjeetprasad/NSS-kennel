@@ -1,15 +1,15 @@
-import React, { useContext, useEffect } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
-import { Animal } from "./Animal"
+import Animal  from "./Animal"
 import "./Animal.css"
 
 export const AnimalList = (props) => {
     // This state changes when `getLocations()` is invoked below
     const { animals, getAnimals } = useContext(AnimalContext)
-    const { locations, getLocations } = useContext(LocationContext)
-    const { customers, getCustomers } = useContext(CustomerContext)
+    // const { locations, getLocations } = useContext(LocationContext)
+    // const { customers, getCustomers } = useContext(CustomerContext)
 
     /*
         What's the effect this is reponding to? Component was
@@ -17,10 +17,7 @@ export const AnimalList = (props) => {
         then gets the data, then re-renders.
     */
     useEffect(() => {
-        console.log("AnimalList: Initial render before data")
-        getLocations()
-        .then(getCustomers)
-        .then(getAnimals)
+        getAnimals()
     }, [])
 
     /*
@@ -33,20 +30,35 @@ export const AnimalList = (props) => {
     // }, [animals])
 
     return (
-        <div className="animals"> 
-            <h1>Animals</h1>
-            <button className= "add-animal" onClick={() => props.history.push("/animals/create")}>
-            Make Appointment
-        </button>
-        <article className="animalList">
-            {animals.map(animal => {
-            const owner = customers.find(c => c.id === animal.customerId)
-            const clinic = locations.find(l => l.id === animal.locationId)
+    //     <div className="animals"> 
+    //         <h1>Animals</h1>
+    //         <button className= "add-animal" onClick={() => props.history.push("/animals/create")}>
+    //         Make Appointment
+    //     </button>
+    //     <article className="animalList">
+    //         {animals.map(animal => {
+    //         const owner = customers.find(c => c.id === animal.customerId)
+    //         const clinic = locations.find(l => l.id === animal.locationId)
 
-        return <Animal key={animal.id} animal={animal} customer={owner} location={clinic} />})}
-        </article>  
-        </div>
-    )
+    //     return <Animal key={animal.id} animal={animal} customer={owner} location={clinic} />})}
+    //     </article>  
+    //     </div>
+    // )
+    <>
+    <h1>Animals</h1>
+
+    <button onClick={() => history.push("/animals/create")}>
+      Make Reservation
+          </button>
+    <div className="animals">
+      {
+        animals.map(animal => {
+          return <Animal key={animal.id} animal={animal} />
+        })
+      }
+    </div>
+  </>
+)
 
     
 }
